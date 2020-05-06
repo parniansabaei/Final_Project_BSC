@@ -20,7 +20,8 @@ module.exports = function(passport){
         // by default, local strategy uses username and password
         usernameField : 'username',
         passwordField : 'password',
-        passReqToCallback : true // allows us to pass back the entire request to the callback
+        passReqToCallback : true 
+        // allows us to pass back the entire request to the callback
     },
     function(req, username, password, done) {
 
@@ -42,7 +43,7 @@ module.exports = function(passport){
 
                 // if there is no user with that username
                 // create the user
-                var newUser            = new User();
+                var newUser = new User();
 
                 // set the user's local credentials
                 
