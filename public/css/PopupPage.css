@@ -1,0 +1,199 @@
+@font-face {
+    font-family: "font/IRANSans";
+    font-weight: 300;
+    src: url("font/IRANSansWeb_Medium.eot?#") format("eot"),
+    url("font/IRANSansWeb_Medium.ttf?#") format("ttf"),
+    url("font/IRANSansWeb_Medium.woff?#") format("woff"),
+    url("font/IRANSansWeb_Medium.woff2?#") format("woff2");
+}
+
+body{
+    font-family: 'font/IRANSans';
+    overflow-x: hidden;
+    background-color: rgb(207, 206, 207) !important;
+}
+/*open_accunt_page*/
+.popup_back{
+    background-color: rgb(250, 249, 252);
+    /*border: 1px solid #ebebeb;*/
+    border-radius: 15px;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    /*position: absolute;*/
+    left: 0;
+    padding-right: 1rem;
+    margin-top: 15%;
+    padding-bottom: 3rem;
+}
+.open_account_text{
+    text-align: center;
+    font-size: 20px;
+    margin-top: 3%;
+    font-weight: bold;
+}
+.open_account_style{
+    color: black !important;
+}
+.open_account_style:hover{
+    text-decoration: none;
+}
+.login_text{
+    width: 100%;
+    background-color: rgb(100, 109, 136);
+    border: 2px rgb(100, 109, 136) solid;
+    border-top-left-radius: 15px;
+    padding-top: 2%;
+    padding-bottom: 3%;
+    text-align: center;
+    border-bottom-right-radius: 20px;
+    top: 0;
+    right: 0;
+}
+.login_text1{
+    width: 100%;
+    background-color: rgb(100, 109, 136);
+    border: 2px rgb(100, 109, 136) solid;
+    border-top-right-radius: 15px;
+    padding-top: 2%;
+    padding-bottom: 3%;
+    text-align: center;
+    border-bottom-left-radius: 20px;
+    top: 0;
+    right: 0;
+}
+.login_style{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+.login_style:hover{
+    text-decoration: none;
+    color: white;
+}
+.form_style{
+    width: 100%;
+    text-align: right;
+    margin-top: 8%;
+}
+.form_style1{
+    width: 100%;
+    text-align: right;
+    margin-top: 1%;
+}
+.form_control{
+    background-color: white;
+    border: 1px solid #ebebeb;
+    border-radius: 40px;
+    width: 100%;
+    padding-top: 1.3%;
+    padding-bottom: 1.3%;
+    padding-right: 3%;
+    outline: none;
+    font-size: 15px;
+}
+.form_lable{
+    font-size: 18px;
+    margin-right: 4%;
+}
+.shaba_comment1{
+    color: white;
+    background-color: rgb(114, 210, 140);
+    width: 110%;
+    font-size: 22px;
+    padding-bottom: .8rem;
+    padding-top: .8rem;
+    border: 1px solid #ebebeb;
+    border-radius: 100px;
+    text-align: center;
+    font-weight: bold;
+    list-style: none;
+    margin-top: 5%;
+}
+.shaba_comment1:hover{
+    background-color: rgb(203, 242, 222);
+}
+.shaba_comment2{
+    color: white;
+    background-color: rgb(236, 109, 111);
+    width: 110%;
+    font-size: 22px;
+    padding-bottom: .8rem;
+    padding-top: .8rem;
+    border: 1px solid #ebebeb;
+    border-radius: 100px;
+    text-align: center;
+    font-weight: bold;
+    list-style: none;
+    margin-top: 5%;
+}
+.shaba_comment2:hover{
+    background-color: rgb(237, 159, 160);
+}
+/*sucess_page*/
+.pop_box{
+    background-color: rgb(250, 249, 252);
+    border: 1px solid #ebebeb;
+    border-radius: 15px;
+    width: 104%;
+    margin-left: 0;
+    position: relative;
+    left: 0;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    margin-top: 25%;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+}
+.success_msg{
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.success_msg1{
+    color: rgb(6, 149, 73);
+}
+.success_msg2{
+    color: rgb(227, 92, 15);
+}
+.test_msg{
+    font-size: 17px;
+    text-align: center;
+}
+.test_check{
+    text-align: right;
+    font-size: 12px;
+}
+.check_style{
+    width: 15px;
+    height: 15px;
+}
+.text_area_style{
+    width: 100%;
+    border: 1px solid #ebebeb;
+    border-radius: 15px;
+    /*margin-top: 4%;*/
+    text-align: right;
+
+}
+.comment_msg{
+    margin-top: 5%;
+    font-size: 15px;
+    text-align: right;
+}
+.shaba_comment{
+    color: white;
+    background-color: rgb(114, 210, 140);
+    width: 100%;
+    font-size: 22px;
+    padding-bottom: .8rem;
+    padding-top: .8rem;
+    border: 1px solid #ebebeb;
+    border-radius: 100px;
+    text-align: center;
+    font-weight: bold;
+    list-style: none;
+    margin-top: 1rem;
+}

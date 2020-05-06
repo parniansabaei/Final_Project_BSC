@@ -1,0 +1,305 @@
+@font-face {
+    font-family: "font/IRANSans";
+    font-weight: 300;
+    src: url("font/IRANSansWeb_Medium.eot?#") format("eot"),
+         url("font/IRANSansWeb_Medium.ttf?#") format("ttf"),
+         url("font/IRANSansWeb_Medium.woff?#") format("woff"),
+         url("font/IRANSansWeb_Medium.woff2?#") format("woff2");
+}
+
+body{
+    font-family: 'font/IRANSans';
+    overflow-x: hidden;
+    background-color: rgb(250, 249, 252) !important;
+}
+
+
+/*NAVBAR*/
+.navbar{
+    background-color: rgb(100, 109, 136) !important;
+    margin-top: 1.5%;
+    border-radius: 30px;
+    width: 95%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.nav-link{
+    color: white;
+    font-size: 155%;
+    font-weight: bold;
+}
+.nav-link:hover{
+    color: rgb(226, 225, 225);
+}
+.nav-item{
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+
+/*Menu*/
+.menu{
+    border: 1px solid #ebebeb;
+    border-radius: 5%;
+    box-shadow: 1px 1px whitesmoke;
+    width: 90%;
+    font-size: 18px;
+    text-align: center;
+    background-color: rgb(226, 225,225);
+    list-style: none;
+    padding-right: 0;
+}
+.menu>li>a{
+    position: relative;
+    text-align: center;
+    display: block;
+    padding: 12px 15px;
+    padding-right: 0;
+}
+.menu>li>a:hover{
+    background-color: rgb(119, 137, 186);
+    color: white !important;
+}
+.menu>li{
+    border-bottom: 1px solid white;
+}
+.menu_item{
+    color: rgb(109, 107, 107) !important;
+    font-weight: bold;
+}
+.menu_item:hover{
+    text-decoration: none;
+}
+
+
+/*Index page*/
+.index_img{
+    width:100%;
+    height: 100%;
+    border-radius: 14px;
+}
+.index_text{
+    font-size: 20px;
+    direction: rtl;
+    margin-top: 5%;
+    text-align: right;
+}
+.bold_text{
+    font-weight: bold;
+    font-size: 20px;
+    direction: rtl;
+}
+
+/*Personal page*/
+.service-item{
+    padding-right: 3.5rem;
+    padding-left: 1.5rem;
+    padding-top: .8rem;
+    padding-bottom: .8rem;
+}
+.service_title{
+    color: white;
+    font-size: 155%;
+    font-weight: bold;
+}
+.logout_item{
+    position: absolute;
+    left: 3%;
+}
+.personal_info{
+    background-color: white;
+    border: 1px solid #ebebeb;
+    border-radius: 15px;
+    width: 100%;
+    padding-top: 1.5rem;
+    padding-bottom: 3rem;
+    padding-right: 2rem;
+    padding-left:.5rem;
+}
+.personal_info_text{
+    font-size: 20px;
+    direction: rtl;
+    text-align: right;
+    margin-top: 2%;
+}
+.personal_box{
+    border: 1px solid #ebebeb;
+    border-radius: 15px;
+    width: 104%;
+    margin-left: 0;
+    position: relative;
+    left: 0;
+}
+
+.personal_img{
+    width:100%;
+    height: 100%;
+    border-bottom-left-radius: 14px;
+    border-top-left-radius: 14px;
+}
+.personal_info_box{
+    margin-top: 7%;
+}
+.information{
+    margin-top: 4%;
+}
+.personal_box1{
+    background-color: rgb(158, 213, 184);
+}
+.personal_box2{
+    background-color: rgb(160, 173, 207);
+}
+.info_item{
+    text-align: right;
+    font-size: 17px;
+    margin-top: 14%;
+    font-weight: bold;
+}
+.info_num{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+.info_num_num{
+    text-align: center;
+    font-size: 12px;
+}
+
+
+/*Pay_bills page*/
+.select_item{
+    background-color:  rgb(100, 109, 136) !important;
+}
+.select_item_change_pass{
+    background-color:  rgb(100, 109, 136) !important;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+.select_item_pay_bills{
+    background-color:  rgb(100, 109, 136) !important;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+.select_item_stay{
+    color: white !important;
+    font-weight: bold;
+}
+.select_item_stay:hover{
+    text-decoration: none;
+}
+.info_about_this_page{
+    background-color: white;
+    border: 1px solid #ebebeb;
+    border-radius: 15px;
+    width: 104%;
+    margin-left: 0;
+    position: relative;
+    left: 0;
+    padding-right: 2rem;
+    margin-top: 2%;
+}
+.enter_info{
+    background-color: white;
+    border: 1px solid #ebebeb;
+    border-radius: 15px;
+    width: 104%;
+    margin-top: 2%;
+    margin-left: 0;
+    position: relative;
+    left: 0;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    direction: rtl;
+    text-align: right;
+}
+.form_control{
+    background-color: white;
+    border: 1px solid #ebebeb;
+    border-radius: 40px;
+    width: 100%;
+    padding-top: 1.3%;
+    padding-bottom: 1.3%;
+    padding-right: 3%;
+    outline: none;
+    font-size: 15px;
+}
+.enter_section{
+    margin-top: 1.5%;
+    margin-bottom: 1%;
+}
+.lable_section{
+    font-size: 15px;
+}
+.form_style{
+    text-align: center;
+}
+.button_style{
+    width: 40%;
+    font-size: 16px;
+    padding-bottom: .5rem;
+    padding-top: .5rem;
+    border: 1px solid #ebebeb;
+    border-radius: 100px;
+    text-align: center;
+    font-weight: bold;
+    list-style: none;
+}
+.bottom_set{
+    margin-top: 2%;
+}
+.sabt{
+    background-color: rgb(125, 213, 167);
+}
+.enseraf{
+    background-color: rgb(236, 109, 111);
+}
+.sabt:hover{
+    background-color: rgb(203, 242, 222);
+}
+.enseraf:hover{
+    background-color: rgb(237, 159, 160);
+}
+
+/*moshahede code shaba page*/
+.shaba_buttom{
+    width: 100%;
+    font-size: 16px;
+    padding-bottom: .5rem;
+    padding-top: .5rem;
+    border: 1px solid #ebebeb;
+    border-radius: 100px;
+    text-align: center;
+    font-weight: bold;
+    list-style: none;
+}
+
+.direction_num_style{
+    background-color: rgb(223, 227, 236);
+    border: 1px solid #ebebeb;
+    border-radius: 15px;
+    width: 104%;
+    margin-left: 0;
+    position: relative;
+    left: 0;
+    padding-right: 2rem;
+    margin-top: 2%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.direction_titile{
+    text-align: right;
+
+}
+.direction_num{
+    background-color: rgb(100, 109, 136);
+    border: 1px solid #ebebeb;
+    border-radius: 15px;
+    width: 18%;
+    text-align: center;
+    padding-top: .3rem;
+    padding-bottom: .3rem;
+    margin-top: 2%;
+    color: white;
+    margin-right: 2%;
+
+}
