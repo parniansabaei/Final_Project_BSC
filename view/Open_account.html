@@ -20,7 +20,7 @@
         <div class="col-lg-6 popup_back">
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6 open_account_text">
-                    <a href="/signup" class="open_account_style">باز کردن حساب</a>
+                    <a href="/signup" class="open_account_style">ایجاد حساب</a>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6 login_text">
                     <a href="/login" class="login_style">ورود</a>
@@ -29,11 +29,6 @@
             <div class="row">
                 <div class="col-md-1 col-lg-1 col-sm-1"></div>
                 <div class="col-md-10 col-lg-10 col-sm-10">
-                <!-- {{#if errors}}
-                    {{#each errors}}
-                        <div class="alert alert-danger">{{msg}}</div>
-                    {{/each}}
-                {{/if}} -->
 
                 <form action="/signup" method="POST">
                     <div class="form_style">
@@ -42,14 +37,12 @@
                     </div>
                     <div class="form_style1">
                         <label class="form_lable">رمز عبور</label>
-                        <input class="form_control" type="password" name="password">
+                        <input class="form_control" id="password" type="password" name="password">
                     </div>
-                    <!-- <div class="form_style1">
+                    <div class="form_style1">
                         <label class="form_lable">تکرار رمز عبور</label>
-                        <input class="form_control" type="password" name="password2" >">
-                    </div> -->
-                </form>
-
+                        <input class="form_control" type="password" name="password2" id="password_confirm" oninput="check(this)">
+                    </div>
                     <div class="row">
                         <div class="col-md-1 col-lg-1 col-sm-1"></div>
                         <div class="col-md-9 col-lg-9 col-sm-9">
@@ -57,6 +50,7 @@
                         </div>
                         <div class="col-md-2 col-lg-2 col-sm-2"></div>
                     </div>
+                </form>
                 </div>
                 <div class="col-md-1 col-lg-1 col-sm-1"></div>
             </div>
@@ -64,6 +58,18 @@
         <div class="col-lg-3"></div>
     </div>
 </div>
+<script language='javascript' type='text/javascript'>
+    function check(input) {
+        if (input.value != document.getElementById('password').value) {
+            input.setCustomValidity('Password Must be Matching.');
+        } else {
+            // input is valid -- reset the error message
+            input.setCustomValidity('');
+        }
+    }
+</script>
+    
+
 
 </body>
 </html>

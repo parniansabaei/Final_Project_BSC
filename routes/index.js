@@ -1,25 +1,47 @@
-// var express = require('express');
-// var router = express.Router();
-
-// //Get Homepage
-// router.get('/', function(req, res){
-//     res.render('homepage.html');
-// });
-// module.exports = router;
-
 module.exports = function(app,passport){
     //Get Homepage
         app.get('/', function(req, res){
             res.render('homepage.html');
         });
     
-    //After Login or Signup
+    //welcome page after Login or Signup
         app.get('/welcome',isLoggedIn,(req,res)=>{
             console.log("req user",req.user);
             res.render('Personal.html',{
                 user : req.user
             });
         });
+
+    //Buy_avarez page 
+    app.get('/avarez',isLoggedIn,(req,res)=>{
+        res.render('Buy_avarez.html');
+    });
+
+    //Buy_charge_mobile page 
+    app.get('/mobilecharge',isLoggedIn,(req,res)=>{
+        res.render('Buy_charge_mobile.html');
+    });
+
+    //change password page 
+    app.get('/changepass',isLoggedIn,(req,res)=>{
+        res.render('change_password.html');
+    });
+
+    //havale bank page 
+    app.get('/havalebank',isLoggedIn,(req,res)=>{
+        res.render('havale_bank.html');
+    });
+
+    //pay bills page 
+    app.get('/paybills',isLoggedIn,(req,res)=>{
+        res.render('Pay_bills.html');
+    });    
+
+    //shaba code page 
+    app.get('/shabacode',isLoggedIn,(req,res)=>{
+        res.render('shaba_code.html');
+    });
+
     //Login page
         app.get('/login',(req,res) => {
             res.render('Log_in.html')
