@@ -42,6 +42,11 @@ module.exports = function(app,passport){
         res.render('shaba_code.html');
     });
 
+    //shaba code page 
+    app.get('/successpage',isLoggedIn,(req,res)=>{
+        res.render('success_page.html');
+    });
+
     //Login page
         app.get('/login',(req,res) => {
             res.render('Log_in.html')

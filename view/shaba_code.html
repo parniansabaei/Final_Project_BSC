@@ -74,7 +74,7 @@
                                 <label class="lable_section">شماره حساب</label>
                             </div>
                             <div class="col-lg-9">
-                                <form class="form_style" action="">
+                                <form class="form_style">
                                     <div class="enter_section">
                                         <input type="number" class="form_control" id="account_num" name="account_num">
                                     </div>
@@ -85,22 +85,22 @@
                         <div class="row">
                             <div class="col-lg-3"></div>
                             <div class="col-lg-9">
-                                <form class="form_style" action="">
+                                <div class="form_style">
                                     <div class="enter_section">
-                                        <button type="button" class="shaba_buttom sabt">مشاهده کد شبا</button>
+                                        <button class="shaba_buttom sabt" id="myBtn">مشاهده کد شبا</button>
                                     </div>
-                                </form>
+                                </div>
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-lg-3"></div>
                             <div class="col-lg-9">
-                                <form class="form_style" action="">
+                                <div class="form_style">
                                     <div class="enter_section">
-                                        <button type="button" class="shaba_buttom enseraf">انصراف</button>
+                                        <button type="button" class="shaba_buttom enseraf" onclick="document.getElementById('account_num').value = ''">انصراف</button>
                                     </div>
-                                </form>
+                                </div>
                             </div>
                         </div>
 
@@ -113,6 +113,39 @@
         </div>
     </div>
 </div>
+<!-- show shaba code -->
+<div id="myModal" class="modal">
+    <div class="row">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-5">
+            <div class="modal-content_shaba">
+                <div class="shaba-code">
+                    <p>کد شبای حساب شما</p>
+                    <p>IR65-5824-0056-7623-2315-78</p>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8">
+                        <button type="button" class="shaba_comment" onclick="window.location.href='/successpage'">OK</button>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3"></div>
+    </div>
+</div>
+<script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
 
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+</script>
 </body>
 </html>
