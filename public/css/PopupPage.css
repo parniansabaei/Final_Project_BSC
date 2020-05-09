@@ -197,3 +197,11 @@ body{
     list-style: none;
     margin-top: 1rem;
 }
+.satisfaction_msg{
+    color: black;
+}
+.satisfaction_msg1{
+    font-size: 17px;
+    text-align: right;
+    margin-top: 5%;
+}

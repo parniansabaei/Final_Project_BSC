@@ -42,11 +42,14 @@ module.exports = function(app,passport){
         res.render('shaba_code.html');
     });
 
-    //shaba code page 
+    //success page 
     app.get('/successpage',isLoggedIn,(req,res)=>{
         res.render('success_page.html');
     });
-
+    //satisfaction page
+    app.get('/satisfaction',isLoggedIn,(req,res)=>{
+        res.render('satisfaction.html');
+    });
     //Login page
         app.get('/login',(req,res) => {
             res.render('Log_in.html')
@@ -71,7 +74,7 @@ module.exports = function(app,passport){
     //logout
         app.get('/logout', function(req, res) {
             req.logout();
-            res.redirect('/welcome');
+            res.redirect('/');
         });
     
     
