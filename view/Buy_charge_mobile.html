@@ -13,11 +13,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </head>
 <body>
 <nav class="navbar navbar-expand-sm">
     <div class="service-item">
-        <p class="service_title">به سیستم خدمات الکترونیکی بانک خوش آمدید </p>
+        <a class="nav-link" href="/welcome"><i class='fas fa-home' style="font-size:20px; color: white;"> پیشخوان </i></a>
     </div>
     <div class="logout_item">
         <a class="nav-link" href="/satisfaction">خروج</a>
@@ -27,6 +28,15 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-4 col-md-4">
+            <div class="row personal_box_page" style="margin-left: 0px; margin-right: 0px;">
+                <div class="col-lg-9">
+                    <p class="info_item1">شماره حساب:</p>
+                    <P class="info_num1">897 134 789 567 346</P>
+                </div>
+                <div class="col-lg-3" style="padding-left: 0px">
+                    <img src="../public/img/personal_num.jpg" class="personal_img1" alt="index_img">
+                </div>
+            </div>
             <ul class="flex-column menu">
                 <li class="menu_item_style">
                     <a class="menu_item" href="/paybills">پرداخت الکترونیک قبوض</a>
@@ -74,13 +84,13 @@
                                 <label class="lable_section">مبلغ شارژ</label>
                             </div>
                             <div class="col-lg-9">
-                                <form class="form_style" action="">
-                                    <select class="form_control" id="bil" name="bill">
-                                        <option value="null">لطفا یکی از موارد را انتخاب کنید</option>
-                                        <option value="water">5,000 تومان</option>
-                                        <option value="elec">10,000 تومان</option>
-                                        <option value="phone">20,000 تومان</option>
-                                        <option value="phone">30,000 تومان</option>
+                                <form class="form_style">
+                                    <select class="form_control" id="cost">
+                                        <option value="">لطفا یکی از موارد را انتخاب کنید</option>
+                                        <option value="cost1">5,000 تومان</option>
+                                        <option value="cost2">10,000 تومان</option>
+                                        <option value="cost3">20,000 تومان</option>
+                                        <option value="cost4">30,000 تومان</option>
                                     </select>
                                 </form>
                             </div>
@@ -91,11 +101,11 @@
                                 <label class="lable_section">شماره حساب</label>
                             </div>
                             <div class="col-lg-9">
-                                <form class="form_style" action="">
+                                <div class="form_style">
                                     <div class="enter_section">
-                                        <input type="number" class="form_control" id="account_num" name="account_num">
+                                        <input type="number" class="form_control" id="account_num">
                                     </div>
-                                </form>
+                                </div>
                             </div>
                         </div>
 
@@ -104,11 +114,11 @@
                                 <label class="lable_section">رمز عبور</label>
                             </div>
                             <div class="col-lg-9">
-                                <form class="form_style" action="">
+                                <div class="form_style">
                                     <div class="enter_section">
-                                        <input type="password" class="form_control" id="password" name="account_num">
+                                        <input type="password" class="form_control" id="password">
                                     </div>
-                                </form>
+                                </div>
                             </div>
                         </div>
 
@@ -119,8 +129,8 @@
             <div class="row">
                 <div class="col-lg-5"></div>
                 <div class="col-lg-7 bottom_set">
-                    <button type="submit" class="button_style sabt">ثبت</button>
-                    <button type="reset" class="button_style enseraf">انصراف</button>
+                    <button type="submit" class="button_style sabt" onclick="sabtfun()">ثبت</button>
+                    <button type="reset" class="button_style enseraf" onclick="resetfun()">انصراف</button>
                 </div>
 
             </div>
@@ -129,5 +139,21 @@
     </div>
 </div>
 
+<script>
+    function sabtfun(){
+        var accountnum = document.getElementById("account_num");
+        var cost = document.getElementById("cost");
+        var n = 346567789134897;
+        if((accountnum.value == n) && (cost.value))
+            window.location.href='/successpage';
+        else
+            alert("اطلاعات شما درست نسیت، لطفا باز امتحان کنید ");
+    }
+    function resetfun(){
+        document.getElementById('account_num').value = '';
+        document.getElementById('cost').value = '';
+        document.getElementById('password').value = '';
+    }
+</script>
 </body>
 </html>

@@ -12,11 +12,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </head>
 <body>
 <nav class="navbar navbar-expand-sm">
     <div class="service-item">
-        <p class="service_title">به سیستم خدمات الکترونیکی بانک خوش آمدید </p>
+        <a class="nav-link" href="/welcome"><i class='fas fa-home' style="font-size:20px; color: white;"> پیشخوان </i></a>
     </div>
     <div class="logout_item">
         <a class="nav-link" href="/satisfaction">خروج</a>
@@ -26,6 +27,15 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-4 col-md-4">
+            <div class="row personal_box_page" style="margin-left: 0px; margin-right: 0px;">
+                <div class="col-lg-9">
+                    <p class="info_item1">شماره حساب:</p>
+                    <P class="info_num1">897 134 789 567 346</P>
+                </div>
+                <div class="col-lg-3" style="padding-left: 0px">
+                    <img src="../public/img/personal_num.jpg" class="personal_img1" alt="index_img">
+                </div>
+            </div>
             <ul class="flex-column menu">
                 <li class="menu_item_style">
                     <a class="menu_item" href="/paybills">پرداخت الکترونیک قبوض</a>
@@ -68,19 +78,19 @@
                 <h3 class="direction_titile">شماره حساب مقصد می تواند یکی از موارد زیر باشد: </h3>
                 <div class="row">
                     <div class="col-lg-2 direction_num">
-                        <h4>123 145 167</h4>
+                        <h4>356 145 167</h4>
                     </div>
                     <div class="col-lg-2 direction_num">
-                        <h4>123 145 167</h4>
+                        <h4>763 413 167</h4>
                     </div>
                     <div class="col-lg-2 direction_num">
-                        <h4>123 145 167</h4>
+                        <h4>935 728 167</h4>
                     </div>
                     <div class="col-lg-2 direction_num">
-                        <h4>123 145 167</h4>
+                        <h4>629 378 167</h4>
                     </div>
                     <div class="col-lg-2 direction_num">
-                        <h4>123 145 167</h4>
+                        <h4>902 638 167</h4>
                     </div>
                 </div>
             </div>
@@ -94,11 +104,11 @@
                                 <label class="lable_section"> شماره حساب مبدا</label>
                             </div>
                             <div class="col-lg-8">
-                                <form class="form_style" action="">
+                                <div class="form_style">
                                     <div class="enter_section">
-                                        <input type="number" class="form_control" id="account_num" name="account_num">
+                                        <input type="number" class="form_control" id="account_num">
                                     </div>
-                                </form>
+                                </div>
                             </div>
                         </div>
 
@@ -107,11 +117,11 @@
                                 <label class="lable_section"> شماره حساب مقصد</label>
                             </div>
                             <div class="col-lg-8">
-                                <form class="form_style" action="">
+                                <div class="form_style">
                                     <div class="enter_section">
-                                        <input type="number" class="form_control" id="direction_num" name="account_num">
+                                        <input type="number" class="form_control" id="direction_num">
                                     </div>
-                                </form>
+                                </div>
                             </div>
                         </div>
 
@@ -120,11 +130,11 @@
                             <label class="lable_section">مبلغ</label>
                         </div>
                         <div class="col-lg-8">
-                            <form class="form_style" action="">
+                            <div class="form_style">
                                 <div class="enter_section">
-                                    <input type="number" class="form_control" id="mablagh_havale" name="account_num">
+                                    <input type="number" class="form_control" id="cost">
                                 </div>
-                            </form>
+                            </div>
                         </div>
                     </div>
                     <div class="row">
@@ -132,11 +142,11 @@
                              <label class="lable_section">شرح واریز</label>
                          </div>
                          <div class="col-lg-8">
-                             <form class="form_style" action="">
+                             <div class="form_style">
                                   <div class="enter_section">
-                                     <input type="text" class="form_control" id="havale_sharh" name="account_num">
+                                     <input type="text" class="form_control" id="sharh_variz">
                                   </div>
-                             </form>
+                             </div>
                          </div>
                     </div>
                     </div>
@@ -146,8 +156,8 @@
             <div class="row">
                 <div class="col-lg-5"></div>
                 <div class="col-lg-7 bottom_set">
-                    <button type="submit" class="button_style sabt">ثبت</button>
-                    <button type="reset" class="button_style enseraf">انصراف</button>
+                    <button type="submit" class="button_style sabt" onclick="sabtfun()">ثبت</button>
+                    <button type="reset" class="button_style enseraf" onclick="resetfun()">انصراف</button>
                 </div>
 
             </div>
@@ -155,6 +165,31 @@
         </div>
     </div>
 </div>
+
+<script>
+    function sabtfun(){
+        var accountnum = document.getElementById("account_num");
+        var directionnum = document.getElementById("direction_num");
+        var cost = document.getElementById("cost");
+        var n = 346567789134897;
+        var n1 =167638902;
+        var n2 =167378629;
+        var n3 =167728935;
+        var n4 =167413763;
+        var n5 =167145356;
+        if((accountnum.value == n) && (cost.value != "") && (directionnum.value == n1 || directionnum.value == n2 || directionnum.value == n3 || directionnum.value == n4 || directionnum.value == n5))
+            window.location.href='/successpage';
+        else
+            alert("اطلاعات شما درست نسیت، لطفا باز امتحان کنید ");
+    }
+    function resetfun(){
+        document.getElementById('account_num').value = '';
+        document.getElementById('direction_num').value = '';
+        document.getElementById('cost').value = '';
+        document.getElementById('password').value = '';
+        document.getElementById('sharh_variz').value = '';
+    }
+</script>
 
 </body>
 </html>
