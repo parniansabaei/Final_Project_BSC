@@ -28,13 +28,24 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-4 col-md-4">
-            <div class="row personal_box_page" style="margin-left: 0px; margin-right: 0px;">
-                <div class="col-lg-9">
-                    <p class="info_item1">شماره حساب:</p>
-                    <P class="info_num1">897 134 789 567 346</P>
+            <div class="cart_style">
+                <div class="cart_style_head">
+                    <div class="row">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-6">
+                            <p class="cart_titile">کارت بانک</p>
+                        </div>
+                        <div class="col-lg-4 cart_img_style">
+                            <img src="../public//img/cart.png" class="cart_img" alt="cart_img">
+                        </div>
+                        <div class="col-lg-1"></div>
+                    </div>
                 </div>
-                <div class="col-lg-3" style="padding-left: 0px">
-                    <img src="../public/img/personal_num.jpg" class="personal_img1" alt="index_img">
+                <p class="shomarecart">278<span style="padding-right: 2%"></span> 836<span style="padding-right: 2%"></span>  305<span style="padding-right: 2%"></span>  719<span style="padding-right: 2%"></span>  634</p>
+                <p class="pass_style">رمز دوم: 2254702</p>
+                <span class="cvv_style">CVV2: 584</span>
+                <span class="date_style">تاریخ انقضا: 06/ 1399</span>
+                <div>
                 </div>
             </div>
             <ul class="flex-column menu">
@@ -53,9 +64,6 @@
                 <li class="menu_item_style">
                     <a class="menu_item" href="/mobilecharge">خرید شارژ سیم کارت اعتباری</a>
                 </li>
-                <!-- <li class="menu_item_style">
-                    <a class="menu_item" href="">صورت حساب یارانه ای</a>
-                </li> -->
                 <li class="menu_item_style">
                     <a class="menu_item" href="/changepass">تغییر رمز عبور</a>
                 </li>
@@ -155,7 +163,7 @@
     // When the user clicks the button, open the modal
     btn.onclick = function() {
         var accountnum = document.getElementById("account_num");
-        var n = 346567789134897;
+        var n = 634719305836278;
         if(accountnum.value == n)
             modal.style.display = "block";
         else

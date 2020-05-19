@@ -20,6 +20,7 @@
         <div class="col-lg-3"></div>
         <div class="col-lg-6">
             <div class="pop_box">
+                <form method="POST" action="/successpage">
                 <div class="success_msg">
                     <p class="success_msg1">عملیات شما با موفقیت انجام شد.</p>
                     <span class="success_msg2">مرسی از همکاری شما</span>
@@ -30,35 +31,53 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-3 test_check">
-                        <input type="checkbox" class="check_style">
+                        <input type="checkbox" name="a[1][]" value="kheiliason">
                         <label>خیلی آسون بود</label>
                     </div>
                     <div class="col-lg-3 test_check">
-                        <input type="checkbox" class="check_style">
+                        <input type="checkbox" name="a[1][]" value="ason">
                         <label> آسون بود</label>
                     </div>
                     <div class="col-lg-3 test_check">
-                        <input type="checkbox" class="check_style">
+                        <input type="checkbox" name="a[1][]" value="sakht">
                         <label>سخت بود</label>
                     </div>
                     <div class="col-lg-3 test_check">
-                        <input type="checkbox" class="check_style">
+                        <input type="checkbox" name="a[1][]" value="kheilisakht">
                         <label>خیلی سخت بود</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-2"></div>
                     <div class="col-lg-8">
-                        <button type="submit" class="shaba_comment" onclick="window.location.href='/welcome'">ثبت</button>
+                        <button type="submit" class="shaba_comment">ثبت</button>
                     </div>
                     <div class="col-lg-2"></div>
                 </div>
+            </form>
             </div>
         </div>
         <div class="col-lg-3"></div>
     </div>
-
 </div>
+
+<script>
+    $("input:checkbox").on('click', function() {
+// in the handler, 'this' refers to the box clicked on
+    var $box = $(this);
+    if ($box.is(":checked")) {
+        // the name of the box is retrieved using the .attr() method
+        // as it is assumed and expected to be immutable
+        var group = "input:checkbox[name='" + $box.attr("name") + "']";
+        // the checked state of the group/box on the other hand will change
+        // and the current value is retrieved using .prop() method
+        $(group).prop("checked", false);
+        $box.prop("checked", true);
+    } else {
+        $box.prop("checked", false);
+    }
+});
+</script>
 
 </body>
 </html>

@@ -1,6 +1,6 @@
 const LocalStrategy = require('passport-local').Strategy;
 
-let User = require('../models/user');
+ let User = require('../models/user');
 
 module.exports = function(passport){
 
@@ -63,6 +63,7 @@ module.exports = function(passport){
         });
 
     }));
+
 //////////////////Login passport Authentication
     passport.use('local-login', new LocalStrategy({
         // by default, local strategy uses username and password

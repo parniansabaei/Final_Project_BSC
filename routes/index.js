@@ -46,6 +46,36 @@ module.exports = function(app,passport){
     app.get('/successpage',isLoggedIn,(req,res)=>{
         res.render('success_page.html');
     });
+    
+    let Post = require('../models/comment');
+    app.post('/successpage', (req, res) => {
+        // Create post and saving
+            var post = new Post({
+                title: req.body.title    
+            });
+            post.save().then(post => {
+                res.send(post);
+            }, (e) => {
+                res.status(400).send(e);
+            }
+        );
+        res.redirect('/welcome');
+    });
+
+    //show database for successpage
+    app.get('/successpost', (req, res) =>{    
+        Post.find({})
+            .then(cmd => {       
+               if(!cmd) {       
+                  res.status(404).send();      
+               }
+               res.send(cmd);
+             }).catch((e) => {      
+                res.status(400).send(e);    
+             });
+        });
+        
+
     //satisfaction page
     app.get('/satisfaction',isLoggedIn,(req,res)=>{
         res.render('satisfaction.html');
@@ -88,5 +118,8 @@ module.exports = function(app,passport){
             // if they aren't redirect them to the home page
             res.redirect('/login');
         }
+
     }
+
+ 
     

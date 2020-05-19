@@ -177,21 +177,21 @@ body{
     margin-top: 14%;
     font-weight: bold;
 }
-.info_item1{
+/* .info_item1{
     text-align: right;
     font-size: 13px;
     font-weight: bold;
-}
+} */
 .info_num{
     text-align: center;
     font-size: 20px;
     font-weight: bold;
 }
-.info_num1{
+/* .info_num1{
     text-align: center;
     font-size: 17px;
     font-weight: bold;
-}
+} */
 .info_num_num{
     text-align: center;
     font-size: 12px;
@@ -399,4 +399,58 @@ body{
     font-weight: bold;
     list-style: none;
     margin-top: 1rem;
+}
+
+/*cart style*/
+.cart_style{
+    border: 2px solid rgb(131, 128, 130);
+    border-radius: 15px;
+    box-shadow: 1px 1px whitesmoke;
+    width: 90%;
+    font-size: 18px;
+    text-align: center;
+    background-color: rgb(250, 249, 252);
+    padding-bottom: 2%;
+    margin-top: 5%;
+}
+.cart_style_head{
+    background-color: rgb(226, 224, 228);
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-bottom: none;
+    width: 100%;
+}
+.cart_img{
+    width: 50%;
+    /*margin-right: 5%;*/
+}
+.cart_img_style{
+    margin-right: 4%;
+}
+.cart_titile{
+    text-align: right;
+    font-weight: bold;
+}
+.shomarecart{
+    font-weight: bold;
+    text-align: center;
+    margin-top: 4%;
+}
+.pass_style{
+    text-align: right;
+    font-size: 13px;
+    margin-right: 12%;
+ }
+.cvv_style{
+    text-align: right;
+    font-size: 13px;
+}
+.date_style{
+    text-align: left;
+    font-size: 13px;
+    margin-right: 18%;
+}
+.tash_style{
+    font-size: 20px;
+    font-weight: bold;
 }

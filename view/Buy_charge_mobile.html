@@ -28,13 +28,24 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-4 col-md-4">
-            <div class="row personal_box_page" style="margin-left: 0px; margin-right: 0px;">
-                <div class="col-lg-9">
-                    <p class="info_item1">شماره حساب:</p>
-                    <P class="info_num1">897 134 789 567 346</P>
+            <div class="cart_style">
+                <div class="cart_style_head">
+                    <div class="row">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-6">
+                            <p class="cart_titile">کارت بانک</p>
+                        </div>
+                        <div class="col-lg-4 cart_img_style">
+                            <img src="../public//img/cart.png" class="cart_img" alt="cart_img">
+                        </div>
+                        <div class="col-lg-1"></div>
+                    </div>
                 </div>
-                <div class="col-lg-3" style="padding-left: 0px">
-                    <img src="../public/img/personal_num.jpg" class="personal_img1" alt="index_img">
+                <p class="shomarecart">278<span style="padding-right: 2%"></span> 836<span style="padding-right: 2%"></span>  305<span style="padding-right: 2%"></span>  719<span style="padding-right: 2%"></span>  634</p>
+                <p class="pass_style">رمز دوم: 2254702</p>
+                <span class="cvv_style">CVV2: 584</span>
+                <span class="date_style">تاریخ انقضا: 06/ 1399</span>
+                <div>
                 </div>
             </div>
             <ul class="flex-column menu">
@@ -53,9 +64,6 @@
                 <li class="menu_item_style select_item">
                     <a class="select_item_stay" href="/mobilecharge">خرید شارژ سیم کارت اعتباری</a>
                 </li>
-                <!-- <li class="menu_item_style">
-                    <a class="menu_item" href="">صورت حساب یارانه ای</a>
-                </li> -->
                 <li class="menu_item_style">
                     <a class="menu_item" href="/changepass">تغییر رمز عبور</a>
                 </li>
@@ -95,11 +103,11 @@
                                 </form>
                             </div>
                         </div>
-
                         <div class="row">
                             <div class="col-lg-3">
                                 <label class="lable_section">شماره حساب</label>
                             </div>
+                            
                             <div class="col-lg-9">
                                 <div class="form_style">
                                     <div class="enter_section">
@@ -108,16 +116,49 @@
                                 </div>
                             </div>
                         </div>
-
+                        
+                         
                         <div class="row">
                             <div class="col-lg-3">
-                                <label class="lable_section">رمز عبور</label>
+                                <label class="lable_section">رمز دوم</label>
                             </div>
                             <div class="col-lg-9">
                                 <div class="form_style">
                                     <div class="enter_section">
-                                        <input type="password" class="form_control" id="password">
+                                        <input type="password" class="form_control" id="secpass">
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <label class="lable_section">CVV2</label>
+                            </div>
+                            <div class="col-lg-9">
+                                <div class="form_style">
+                                    <div class="enter_section">
+                                        <input type="number" class="form_control" id="cvv">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <label class="lable_section">تاریخ انقضا</label>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="enter_section">
+                                    <input type="number" class="form_control" id="expdate1">
+                                </div>
+                            </div>
+                            <div class="col-lg-1">
+                                <p class="tash_style">/</p>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="enter_section">
+                                    <input type="number" class="form_control" id="expdate2">
                                 </div>
                             </div>
                         </div>
@@ -143,16 +184,30 @@
     function sabtfun(){
         var accountnum = document.getElementById("account_num");
         var cost = document.getElementById("cost");
-        var n = 346567789134897;
-        if((accountnum.value == n) && (cost.value))
+        var secpass = document.getElementById("secpass");
+        var cvv = document.getElementById("cvv");
+        var expdate1 = document.getElementById("expdate1");
+        var expdate2 = document.getElementById("expdate2");
+        var n = 634719305836278;
+        var p = 2254702;
+        var cv = 584;
+        var ex1 = 06;
+        var ex2 = 1399;
+        
+        if((accountnum.value == n) && (cost.value) && (secpass.value == p) && (cvv.value == cv) && (expdate1.value == ex1) && (expdate2.value == ex2))
             window.location.href='/successpage';
         else
             alert("اطلاعات شما درست نسیت، لطفا باز امتحان کنید ");
     }
+
     function resetfun(){
         document.getElementById('account_num').value = '';
         document.getElementById('cost').value = '';
-        document.getElementById('password').value = '';
+        document.getElementById("secpass").value = '';
+        document.getElementById("cvv").value = '';
+        document.getElementById("expdate1").value = '';
+        document.getElementById("expdate2").value = '';
+
     }
 </script>
 </body>
