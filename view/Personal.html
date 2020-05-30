@@ -17,13 +17,19 @@
 <body>
 
     <nav class="navbar navbar-expand-sm">
-                    <div class="service-item">
-                        <a class="nav-link" href="/welcome"><i class='fas fa-home' style="font-size:20px; color: white;"> پیشخوان </i></a>
-                    </div>
-                    <div class="logout_item">
-                        <a class="nav-link" href="/satisfaction">خروج</a>
-                    </div>
-                </nav>
+        <div class="col-lg-6">
+            <div class="service-item">
+                <a class="nav-link" href="/welcome"><i class='fas fa-home' style="font-size:20px; color: white;"> پیشخوان </i></a>
+            </div>
+        </div>
+        <div class="col-lg-3"></div>
+        <div class="col-lg-2">
+            <button class="nazarsanji">نظر دهید</button>
+        </div>
+        <div class="col-lg-1">
+            <a class="nav-link" href="/logout">خروج</a>
+        </div>
+    </nav>
 
                 <div class="container">
                     <div class="row">
@@ -44,9 +50,6 @@
                                 <li class="menu_item_style">
                                     <a class="menu_item" href="/mobilecharge">خرید شارژ سیم کارت اعتباری</a>
                                 </li>
-                                <!-- <li class="menu_item_style">
-                                    <a class="menu_item" href="">صورت حساب یارانه ای</a>
-                                </li> -->
                                 <li class="menu_item_style">
                                     <a class="menu_item" href="/changepass">تغییر رمز عبور</a>
                                 </li>
@@ -56,32 +59,35 @@
             <div class="col-lg-8 col-md-8 information">
                 <div class="personal_info">
                     <p class="service_title">  <i class="fa fa-bank" style="font-size:22px; text-align: right; direction: rtl;"></i> به سیستم خدمات الکترونیکی بانک خوش آمدید. </p>
-                    <p class="personal_info_text">شما می توانید با استفاده از این شماره کارت و موجودی حسابی که در زیر مشخص شده است، از خدمات این بانک استفاده کنید.</p>
-
-                    <div class="row personal_info_box">
+                    <p class="personal_info_text">شما می توانید با استفاده از اطلاعات کارت بانکی که برای شما در نظر گرفته شده است تراکنش های مورد نظر را انجام دهید.</p>
+                    <p class="personal_info_text">در این سایت، هیچگونه محدودیت مالی برای شما در نظر گرفته نشده است.</p>
+                    <p class="personal_info_text">لطفا پس از اتمام خدمات بانکی که در منوی سمت راست برای شما مشخص شده است، روی دکمه سبز رنک <span style="font-weight: bold;">"نظر دهید"</span> کلیک کنید و نظر خود را در رابطه با این سیستم بانکی بدهید.</p>
+                    
+                    <div class="row">
+                        <div class="col-lg-3"></div>
                         <div class="col-lg-6">
-                            <div class="row personal_box personal_box1">
-                                <div class="col-lg-7">
-                                    <p class="info_item">موجودی حساب:</p>
-                                    <P class="info_num">346,567,789</P>
-                                    <p class="info_num_num">تومان</p>
+                            <div class="cart_style">
+                                <div class="cart_style_head">
+                                    <div class="row">
+                                        <div class="col-lg-1"></div>
+                                        <div class="col-lg-6">
+                                            <p class="cart_titile">کارت بانک</p>
+                                        </div>
+                                        <div class="col-lg-4 cart_img_style">
+                                            <img src="../public//img/cart.png" class="cart_img" alt="cart_img">
+                                        </div>
+                                        <div class="col-lg-1"></div>
+                                    </div>
                                 </div>
-                                <div class="col-lg-5" style="padding-left: 0px">
-                                    <img src="../public/img/personal_money.png" class="personal_img" alt="index_img">
+                                <p class="shomarecart">278<span style="padding-right: 2%"></span> 836<span style="padding-right: 2%"></span>  305<span style="padding-right: 2%"></span>  719<span style="padding-right: 2%"></span>  634</p>
+                                <p class="pass_style">رمز دوم: 2254702</p>
+                                <span class="cvv_style">CVV2: 584</span>
+                                <span class="date_style">تاریخ انقضا: 06/ 1399</span>
+                                <div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6">
-                            <div class="row personal_box personal_box2">
-                                <div class="col-lg-7">
-                                    <p class="info_item">شماره حساب:</p>
-                                    <P class="info_num">346,567,789,134</P>
-                                </div>
-                                <div class="col-lg-5" style="padding-left: 0px">
-                                    <img src="../public/img/personal_num.jpg" class="personal_img" alt="index_img">
-                                </div>
-                            </div>
-                        </div>
+                        <div class="col-lg-3"></div>
                     </div>
                 </div>
 

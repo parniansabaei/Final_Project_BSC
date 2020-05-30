@@ -17,11 +17,17 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-sm">
-    <div class="service-item">
-        <a class="nav-link" href="/welcome"><i class='fas fa-home' style="font-size:20px; color: white;"> پیشخوان </i></a>
+    <div class="col-lg-6">
+        <div class="service-item">
+            <a class="nav-link" href="/welcome"><i class='fas fa-home' style="font-size:20px; color: white;"> پیشخوان </i></a>
+        </div>
     </div>
-    <div class="logout_item">
-        <a class="nav-link" href="/satisfaction">خروج</a>
+    <div class="col-lg-3"></div>
+    <div class="col-lg-2">
+        <button class="nazarsanji" onclick="window.location.href='/satisfaction'">نظر دهید</button>
+    </div>
+    <div class="col-lg-1">
+        <a class="nav-link" href="/logout">خروج</a>
     </div>
 </nav>
 
@@ -75,7 +81,7 @@
                 <div class="row">
                     <div class="col-lg-8">
                         <p class="personal_info_text">با استفاده از این سامانه می توانید کد شبای حساب خود را مشاهده کنید. </p>
-                        <p class="personal_info_text">برای این کار کافی است شماره حساب خود را در قسمتی که مشخص شده است، وارد کنید. </p>
+                        <p class="personal_info_text">برای این کار کافی است شماره کارت بانکی مشخص شده را در قسمت زیر وارد کنید. </p>
                     </div>
                     <div class="col-lg-4">
                         <img src="../public/img/code_shaba.png" class="personal_img" alt="index_img">
@@ -144,7 +150,7 @@
                 <div class="row">
                     <div class="col-lg-2"></div>
                     <div class="col-lg-8">
-                        <button type="button" class="shaba_comment" onclick="window.location.href='/successpage'">OK</button>
+                        <button type="button" class="shaba_comment" onclick="window.location.href='/welcome'">OK</button>
                     </div>
                     <div class="col-lg-2"></div>
                 </div>
@@ -153,12 +159,36 @@
         <div class="col-lg-3"></div>
     </div>
 </div>
+
+<!-- fail popup -->
+<div id="myModalfail" class="modal">
+
+    <div class="row">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-5">
+            <div class="modal-content_shaba">
+                <span class="close">&times;</span>
+                <div class="failmsg">
+                    <span>اطلاعات شما درست نسیت، لطفا باز امتحان کنید</span>
+                    <i class="fa fa-frown-o" style="font-size: 23px;"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3"></div>
+    </div>
+  
+  </div>
+  
 <script>
     // Get the modal
     var modal = document.getElementById("myModal");
+    var failmodal = document.getElementById("myModalfail");
 
     // Get the button that opens the modal
     var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
 
     // When the user clicks the button, open the modal
     btn.onclick = function() {
@@ -167,7 +197,19 @@
         if(accountnum.value == n)
             modal.style.display = "block";
         else
-            alert("اطلاعات شما درست نسیت، لطفا باز امتحان کنید ");
+            failmodal.style.display = "block";
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+                failmodal.style.display = "none";
+            }
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == failmodal) {
+                    failmodal.style.display = "none";
+                }
+            }
+            
+        
     }
 </script>
 </body>

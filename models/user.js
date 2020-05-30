@@ -4,8 +4,7 @@ const Schema = mongoose.Schema;
 
 let userschema = new Schema({
     username : String,
-    password : String,
-    money : Number
+    password : String
 });
 
 userschema.methods.generateHash = function(password) {

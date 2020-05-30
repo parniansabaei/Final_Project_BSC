@@ -141,7 +141,7 @@ body{
     left: 0;
     padding-right: 1rem;
     padding-left: 1rem;
-    margin-top: 25%;
+    margin-top: 20%;
     padding-top: 1rem;
     padding-bottom: 3rem;
 }
@@ -204,4 +204,14 @@ body{
     font-size: 17px;
     text-align: right;
     margin-top: 5%;
+}
+.satisoption{
+    width: 100%;
+    font-size: 15px;
+    border-radius: 8px;
+    height: 80%;
+}
+.optionfont{
+    font-size: 15px;
+    font-weight: bold;
 }

@@ -44,35 +44,6 @@ db.once('open', function() {
     console.log('connected');
 });
 
-
-
-// var MongoClient = require('mongodb').MongoClient;
-// var url = "mongodb://localhost:27017/mydb";
-// var mongoOptions = {useNewUrlParser: true, useUnifiedTopology: true};
-
-// MongoClient.connect(url,mongoOptions ,function(err, db) {
-//   if (err) throw err;
-//   console.log("Database created!");
-//   db.close();
-// });
-
-// app.post('/successpage', function (req, res) {
-//     db.then(function(d) {
-//         d.collection('feedbacks').insertOne(req.body);
-//     });    
-//     // res.send('Data received:\n' + JSON.stringify(req.body));
-//     res.render( '/welcome');
-// })
-
-// var dbm = new Schema({ typediff: String}, { collection : 'feedbacks' });
-// app.get('/view-feedbacks',  function(req, res) {
-//     dbm.then(function(d) {
-//         d.collection('feedbacks').find({}).toArray().then(function(feedbacks) {
-//             res.status(200).json(feedbacks);
-//         });
-//     });
-// });
-
 app.use(session({secret : 'ilearnnodejs'}));
 app.use(passport.initialize());
 app.use(passport.session());
@@ -89,7 +60,3 @@ app.listen(PORT,() => {
     console.log(`app is listening to port ${PORT}`);
 })
 
-// //index.html page
-// app.get('/index', (req, res)=>{
-//     res.sendFile(path.join(__dirname, 'index.html'));
-// });

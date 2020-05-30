@@ -18,11 +18,17 @@
 
 <body>
 <nav class="navbar navbar-expand-sm">
-    <div class="service-item">
-        <a class="nav-link" href="/welcome"><i class='fas fa-home' style="font-size:20px; color: white;"> پیشخوان </i></a>
+    <div class="col-lg-6">
+        <div class="service-item">
+            <a class="nav-link" href="/welcome"><i class='fas fa-home' style="font-size:20px; color: white;"> پیشخوان </i></a>
+        </div>
     </div>
-    <div class="logout_item">
-        <a class="nav-link" href="/satisfaction">خروج</a>
+    <div class="col-lg-3"></div>
+    <div class="col-lg-2">
+        <button class="nazarsanji">نظر دهید</button>
+    </div>
+    <div class="col-lg-1">
+        <a class="nav-link" href="/logout">خروج</a>
     </div>
 </nav>
 
@@ -76,7 +82,7 @@
                 <div class="row">
                     <div class="col-lg-8">
                         <p class="personal_info_text">با استفاده از این سامانه مي توانيد ، قبض آب، برق و تلفن خود را پرداخت کنید. </p>
-                        <p class="personal_info_text"> برای این کار کافی است نوع قبض مورد نظر خود را در قسمت پایین انتخاب کنید و سپس پس از وارد کردن "شماره حساب خود"  مبلغ قبض خود را <span style="font-weight: bold">(تومان)</span> پرداخت کنید.</p>
+                        <p class="personal_info_text"> برای این کار کافی است نوع قبض مورد نظر خود را در قسمت پایین انتخاب کنید و سپس مطابق با کارت بانکی مشخص شده، مبلغ قبض خود را  <span style="font-weight: bold">(به تومان)</span> پرداخت کنید.</p>
 
                     </div>
                     <div class="col-lg-4">
@@ -183,7 +189,7 @@
             <div class="row">
                 <div class="col-lg-5"></div>
                 <div class="col-lg-7 bottom_set">
-                    <button type="submit" class="button_style sabt" onclick="sabtfun()">ثبت</button>
+                    <button type="submit" class="button_style sabt" id="myBtn">ثبت</button>
                     <button type="reset" class="button_style enseraf" onclick="resetfun()">انصراف</button>
                 </div>
             </div>
@@ -192,8 +198,62 @@
     </div>
 </div>
 
+<!-- show success page -->
+<div id="myModal" class="modal">
+    <div class="row">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-5">
+            <div class="modal-content_shaba">
+                <div class="success_msg">
+                    <p class="success_msg1">عملیات شما با موفقیت انجام شد.</p>
+                    <span class="success_msg2">مرسی از همکاری شما</span>
+                    <i class='far fa-grin-beam success_msg2' style='font-size:23px'></i>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8">
+                        <button type="button" class="shaba_comment" onclick="window.location.href='/welcome'">OK</button>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3"></div>
+    </div>
+</div>
+
+<!-- fail popup -->
+<div id="myModalfail" class="modal">
+
+    <div class="row">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-5">
+            <div class="modal-content_shaba">
+                <span class="close">&times;</span>
+                <div class="failmsg">
+                    <span>اطلاعات شما درست نسیت، لطفا باز امتحان کنید</span>
+                    <i class="fa fa-frown-o" style="font-size: 23px;"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3"></div>
+    </div>
+  
+  </div>
+
+
 <script>
-    function sabtfun(){
+    // Get the modal
+    var modal = document.getElementById("myModal");
+    var failmodal = document.getElementById("myModalfail");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = function(){
         var accountnum = document.getElementById("account_num");
         var bill = document.getElementById("bill");
         var cost = document.getElementById("cost");
@@ -208,9 +268,19 @@
         var ex2 = 1399;
 
         if((accountnum.value == n) && (bill.value) && (cost.value != "") && (secpass.value == p) && (cvv.value == cv) && (expdate1.value == ex1) && (expdate2.value == ex2))
-            window.location.href='/successpage';
+            modal.style.display = "block";
         else
-            alert("اطلاعات شما درست نسیت، لطفا باز امتحان کنید ");
+            failmodal.style.display = "block";
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+                failmodal.style.display = "none";
+            }
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == failmodal) {
+                    failmodal.style.display = "none";
+                }
+            }
     }
     function resetfun(){
         document.getElementById('account_num').value = '';

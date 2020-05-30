@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 
 // Create Post Schema for satisfaction
 const PostSchema = new mongoose.Schema({    
-    value: String 
+    value: Number 
 });
 
 let Post = mongoose.model("Post", PostSchema);

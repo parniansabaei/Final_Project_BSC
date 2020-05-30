@@ -27,6 +27,7 @@ body{
     color: white;
     font-size: 155%;
     font-weight: bold;
+    text-align: right;
 }
 .nav-link:hover{
     color: rgb(226, 225, 225);
@@ -84,6 +85,7 @@ body{
     direction: rtl;
     margin-top: 5%;
     text-align: right;
+    color: rgb(55, 61, 69);
 }
 .bold_text{
     font-weight: bold;
@@ -97,9 +99,10 @@ body{
     padding-left: 1.5rem;
     padding-top: .8rem;
     padding-bottom: .8rem;
+    text-align: right;
 }
 .service_title{
-    color: black;
+    color: rgb(55, 61, 69);
     font-size: 20px;
     font-weight: bold;
     text-align: right;
@@ -129,6 +132,7 @@ body{
     direction: rtl;
     text-align: right;
     margin-top: 2%;
+    color: rgb(55, 61, 69);
 }
 .personal_box{
     border: 1px solid #ebebeb;
@@ -163,7 +167,7 @@ body{
     margin-top: 7%;
 }
 .information{
-    margin-top: 4%;
+    margin-top: 1%;
 }
 .personal_box1{
     background-color: rgb(158, 213, 184);
@@ -184,7 +188,7 @@ body{
 } */
 .info_num{
     text-align: center;
-    font-size: 20px;
+    font-size: 17px;
     font-weight: bold;
 }
 /* .info_num1{
@@ -261,6 +265,7 @@ body{
 }
 .lable_section{
     font-size: 15px;
+    color:rgb(55, 61, 69);
 }
 .form_style{
     text-align: center;
@@ -383,7 +388,7 @@ body{
 .shaba-code{
     text-align: center;
     font-size: 20px;
-    color: black;
+    color: rgb(55, 61, 69);
     margin-top: 5%;
 }
 .shaba_comment{
@@ -454,3 +459,53 @@ body{
     font-size: 20px;
     font-weight: bold;
 }
+.nazarsanji{
+    color: white;
+    background-color: rgb(114, 210, 140);
+    width: 60%;
+    font-size: 150%;
+    padding-bottom: .8rem;
+    padding-top: .8rem;
+    border: .3px solid rgb(114, 210, 140);
+    border-radius: 80px;
+    text-align: center;
+    font-weight: bold;
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.success_msg{
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.success_msg1{
+    color: rgb(6, 149, 73);
+}
+.success_msg2{
+    color: rgb(227, 92, 15);
+}
+.failmsg{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color:rgb(55, 61, 69);
+}
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 2.3rem !important;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color:rgb(55, 61, 69);
+    text-decoration: none;
+    cursor: pointer;
+  }
