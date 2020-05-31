@@ -22,10 +22,10 @@ module.exports = function(app,passport){
         res.render('Buy_charge_mobile.html');
     });
 
-    //change password page 
-    app.get('/changepass',isLoggedIn,(req,res)=>{
-        res.render('change_password.html');
-    });
+    // //change password page 
+    // app.get('/changepass',isLoggedIn,(req,res)=>{
+    //     res.render('change_password.html');
+    // });
 
     //havale bank page 
     app.get('/havalebank',isLoggedIn,(req,res)=>{

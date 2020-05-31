@@ -20,8 +20,3 @@ userschema.methods.validPassword = function(password) {
 let User = mongoose.model('User',userschema);
 
   module.exports = User;
-//  module.exports = Post;
-// module.exports = {
-//     User,
-//     Post
-// }
